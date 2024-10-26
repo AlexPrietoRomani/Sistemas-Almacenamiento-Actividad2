@@ -51,7 +51,7 @@ El proyecto consiste en una aplicación para gestionar libros en una base de dat
 
 1. **Clonar el repositorio**:
     ```bash
-    git clone <URL del repositorio>
+    git clone [<URL del repositorio>](https://github.com/AlexPrietoRomani/Sistemas-Almacenamiento-Actividad2)
     cd 2da convocatoria
     ```
 
