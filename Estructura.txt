@@ -1,0 +1,21 @@
+/2da convocatoria
+│
+├── Parte1/
+│   ├── Actividad1.cql          # Archivo original de creación de la base de datos
+│   ├── Consultas_tablas.txt    # Descripción de las tablas requeridas
+│   └── CrearTablas.cql         # Archivo final para la creación del keyspace y las tablas
+│
+├── Parte2/
+│   ├── main.py                 # Código Python para gestionar datos en Cassandra
+│   ├── clases.py               # Definición de clases para entidades y relaciones
+│   └── conexion.py             # Código para la conexión con Cassandra
+│   └── Dockerfile              # Dockerfile para el entorno Python
+│
+├── Parte3/
+│   ├── migracion.cql           # Definición de la tabla "aire" y otros detalles
+│   ├── migracion_comandos.txt  # Comandos para realizar la migración con DataStax Bulk Loader
+│   ├── calidadAire.csv         # Archivo CSV para la migración
+│   └── reporte_migracion.pdf   # Documento PDF con capturas y explicación de la migración
+│
+├── docker-compose.yml          # Docker Compose para desplegar todo el proyecto
+└── README.md                   # Documentación del proyecto
