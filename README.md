@@ -109,13 +109,13 @@ Para realizar la migración de datos del archivo calidadAire.csv a Cassandra:
 2. Usar el comando de DataStax Bulk Loader:
 
    ```bash
-dsbulk load -k alexprieto -t aire -url /2da convocatoria/Parte3/calidadAire.csv -delim ',' -header true
+    dsbulk load -k alexprieto -t aire -url /2da convocatoria/Parte3/calidadAire.csv -delim ',' -header true
    ```
 
 3. Consulta de datos migrados:
 
    ```bash
-docker exec -it cassandra_db cqlsh -e "SELECT * FROM alexprieto.aire;"
+    docker exec -it cassandra_db cqlsh -e "SELECT * FROM alexprieto.aire;"
    ```
 
 ## Problemas Comunes
