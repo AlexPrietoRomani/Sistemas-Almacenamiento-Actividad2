@@ -1,0 +1,85 @@
+1. Tabla 1: Obtener toda la información de libros publicados en un año en concreto
+
+CREATE TABLE IF NOT EXISTS biblioteca.Tabla1 (
+    Libro_AnioPublicacion INT,
+    Libro_Titulo TEXT,
+    Libro_Autor TEXT,
+    Libro_Editorial TEXT,
+    Libro_ISBN TEXT,
+    PRIMARY KEY (Libro_AnioPublicacion, Libro_Titulo)
+);
+
+
+2. Tabla 2: Obtener toda la información de los ejemplares de un libro según el título
+
+CREATE TABLE IF NOT EXISTS Tabla2 (
+    Libro_Titulo TEXT,
+    Ejemplar_Numero UUID,
+    Ejemplar_Estado TEXT,
+    Ejemplar_FechaIngreso DATE,
+    PRIMARY KEY (Libro_Titulo, Ejemplar_Numero)
+);
+
+
+3. Tabla 3: Obtener toda la información de los libros escritos por un autor buscando por el nombre del autor
+
+CREATE TABLE IF NOT EXISTS Tabla3 (
+    Autor_Nombre TEXT,
+    Libro_Titulo TEXT,
+    Libro_ISBN TEXT,
+    Libro_AñoPublicacion INT,
+    PRIMARY KEY (Autor_Nombre, Libro_Titulo)
+);
+
+
+4. Tabla 4: Obtener los usuarios que han tomado prestado el ejemplar de un libro según el título
+
+CREATE TABLE IF NOT EXISTS Tabla4 (
+    Libro_Titulo TEXT,
+    Ejemplar_Numero UUID,
+    Usuario_ID UUID,
+    Prestamo_Fecha DATE,
+    PRIMARY KEY (Libro_Titulo, Ejemplar_Numero, Usuario_ID)
+);
+
+5. Tabla 5: Consultar la información de los usuarios por ciudad
+
+CREATE TABLE IF NOT EXISTS Tabla5 (
+    Usuario_Ciudad TEXT,
+    Usuario_ID UUID,
+    Usuario_Nombre TEXT,
+    Usuario_Email TEXT,
+    PRIMARY KEY (Usuario_Ciudad, Usuario_ID)
+);
+
+
+6. Tabla 6: Obtener cuántas veces se ha prestado un ejemplar según su número
+
+CREATE TABLE IF NOT EXISTS Tabla6 (
+    Ejemplar_Numero UUID,
+    Prestamo_Fecha DATE,
+    Prestamo_UsuarioID UUID,
+    PRIMARY KEY (Ejemplar_Numero, Prestamo_Fecha)
+);
+
+7. Tabla 7: Obtener la información de los autores que han ganado un premio específico
+
+CREATE TABLE IF NOT EXISTS Tabla7 (
+    Premio_Nombre TEXT,
+    Autor_Nombre TEXT,
+    Autor_Pais TEXT,
+    Autor_FechaNacimiento DATE,
+    PRIMARY KEY (Premio_Nombre, Autor_Nombre)
+);
+
+
+8. Tabla 8: Buscar según la fecha de préstamo los ejemplares prestados y el usuario que lo tomó prestado
+
+CREATE TABLE IF NOT EXISTS Tabla8 (
+    Prestamo_Fecha DATE,
+    Ejemplar_Numero UUID,
+    Usuario_ID UUID,
+    PRIMARY KEY (Prestamo_Fecha, Ejemplar_Numero, Usuario_ID)
+);
+
+

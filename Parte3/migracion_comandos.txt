@@ -1,0 +1,1 @@
+dsbulk load -k alexprieto -t aire -url calidadAire(2).csv -delim ',' -header true
